@@ -157,13 +157,22 @@ section.hero {
     overflow: hidden;
 }
 
-.particles-cover {
+#particles-js {
     width: 100%;
-    height: 100%;
+}
+
+.particles-cover {
     background: #161616;
     position: absolute;
-    top: 0px;
     opacity: 0.75;
+}
+
+.shadow-text {
+    text-shadow: 0px 0px 15px #484848;
+}
+
+.linear-background {
+    background: linear-gradient(0deg, #000 50%, #eff3f6 50%);
 }
 
 .background-img img {
@@ -304,7 +313,7 @@ section.hero {
 
 .mobile-but .lines:after,
 .mobile-but .lines:before {
-    background: #fff;
+    background: #000;
 }
 
 .toggle-mobile-but.active .mobile-but .lines:after {
@@ -335,10 +344,10 @@ section.hero {
     color: #ffffff;
     position: relative;
     padding: 1rem 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.main-nav li a {
+/* .main-nav li a {
     color: #ffffff !important;
     opacity: .5 !important;
 }
@@ -346,7 +355,7 @@ section.hero {
 .main-nav li a:hover {
     color: #ffffff !important;
     opacity: 1 !important;
-}
+} */
 
 .block-helper li {
     position: relative;
@@ -361,14 +370,30 @@ section.hero {
     color: #9e9e9e;
 }
 
+.header.switched-header .mobile-but .lines::before,
+.header.switched-header .mobile-but .lines::after {
+    background: #ffffff;
+    opacity: .9 !important;
+}
+
+.header.default .main-nav li a {
+    color: #000;
+    opacity: .6;
+}
+
+.header.default .main-nav li a:hover {
+    color: #000;
+    opacity: .9 !important;
+}
+
 .header.switched-header .main-nav li a {
     color: #ffffff;
-    opacity: .8;
+    opacity: .6;
 }
 
 .header.switched-header .main-nav li a:hover {
     color: #ffffff;
-    opacity: 1 !important;
+    opacity: .9 !important;
 }
 
 .header.switched-header .block-helper li a {
@@ -652,7 +677,6 @@ a.selected {
     text-align: center;
     background: #161616;
     color: #ffffff;
-    border-top: 1px solid #9e9e9e;
 }
 
 .footer small span {
@@ -705,6 +729,10 @@ a.selected {
         color: #ffffff !important;
     }
 
+    .hero-content {
+        top: 80%;
+    }
+
     .mobile-but {
         display: block;
     }
@@ -724,10 +752,10 @@ a.selected {
     .main-nav li span {
         display: inline-block;
         padding: .5rem 0;
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .main-nav li a {
+    /* .main-nav li a {
         color: #ffffff !important;
         opacity: .5 !important;
     }
@@ -735,7 +763,7 @@ a.selected {
     .main-nav li a:hover {
         color: #ffffff !important;
         opacity: 1 !important;
-    }
+    } */
 
     .main-nav li:last-child a {
         padding-bottom: 0;
@@ -1012,7 +1040,7 @@ a.selected {
 
 .disco-history {
     max-width: 100%;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
     border: 2px solid transparent;
     border-color: rgba(255, 255, 255, .07);
 }
