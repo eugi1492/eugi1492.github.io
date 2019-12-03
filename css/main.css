@@ -1109,4 +1109,8 @@ a.selected {
     }
 }
 
+.big-size {
+    font-size: 22px;
+}
+
 /*End media queries*/
