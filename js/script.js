@@ -74,76 +74,13 @@
         .css("background-image", 'url("' + i + '")')
         .css("background-position", "initial");
     }),
-    e(".popup-image").magnificPopup({
-      type: "image",
-      fixedContentPos: !1,
-      fixedBgPos: !1,
-      mainClass: "mfp-no-margins mfp-with-zoom",
-      image: {
-        verticalFit: !0
-      },
-      zoom: {
-        enabled: !0,
-        duration: 300
-      }
-    }),
-    e(".popup-video").magnificPopup({
-      disableOn: 700,
-      type: "iframe",
-      mainClass: "mfp-fade",
-      removalDelay: 160,
-      preloader: !1,
-      fixedContentPos: !1
-    });
-  e.get(
-    "https://wt-3124fd8f88a61e57a4cfca31da4ab788-0.sandbox.auth0-extend.com/ig-photo-eugi",
-    function (data) {
-      if (data.feeds.length > 0) {
-        for (var p in data.feeds) {
-          var feed = data.feeds[p];
-          console.log(feed.type)
-          var htmlFeed =
-            "<img style=\"background-image: url('" +
-            feed.images.standard_resolution.url +
-            '\'" href="' +
-            (feed.type == "video" ?
-              feed.videos.standard_resolution.url :
-              feed.images.standard_resolution.url) +
-            '" class="popup-' +
-            (feed.type == 'carousel' ? 'image' : feed.type) +
-            ' mb-0 square animated">' +
-            "</img>";
-          e(".feed-container").append(htmlFeed);
+    $('.gallery').each(function () {
+      $(this).magnificPopup({
+        delegate: 'img',
+        type: 'image',
+        gallery: {
+          enabled: true
         }
-
-        e(".popup-image").magnificPopup({
-          type: "image",
-          fixedContentPos: !1,
-          fixedBgPos: !1,
-          mainClass: "mfp-no-margins mfp-with-zoom",
-          image: {
-            verticalFit: !0
-          },
-          zoom: {
-            enabled: !0,
-            duration: 300
-          }
-        });
-        e(".popup-video").magnificPopup({
-          type: "iframe",
-          mainClass: "mfp-fade",
-          removalDelay: 160,
-          preloader: !1,
-          fixedContentPos: !1
-        });
-      } else {
-        e(".feed-container").append(
-          '<p class="col-sm-12">No photos found.</p>'
-        );
-      }
-
-      // hide loader
-      e("#gallery-loader").hide();
-    }
-  );
+      });
+    });
 })(jQuery);
