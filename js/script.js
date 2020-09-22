@@ -9,6 +9,7 @@
       // update copyright date
       $("#current-date").text(new Date().getFullYear());
     }),
+    /* $('.zoom').magnify(); */
     e("a.scroll").smoothScroll({
       speed: 800,
       offset: -60
