@@ -1,6 +1,7 @@
 !(function (e) {
   "use strict";
   e(window).on("load", function () {
+      $('#cover-img').height(window.innerHeight)
       e(".loader-inner").fadeOut(),
         e(".loader")
         .delay(200)
@@ -9,10 +10,9 @@
       // update copyright date
       $("#current-date").text(new Date().getFullYear());
     }),
-    /* $('.zoom').magnify(); */
     e("a.scroll").smoothScroll({
       speed: 800,
-      offset: -60
+      offset: -200
     });
   var i = e(".header"),
     a = i.offset(),
