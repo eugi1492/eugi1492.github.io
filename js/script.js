@@ -1,7 +1,9 @@
 !(function (e) {
   "use strict";
+  $('#cover-img').height(window.innerHeight)
   e(window).on("load", function () {
-      $('#cover-img').height(window.innerHeight)
+      console.log("loaded")
+      $('body').show();
       e(".loader-inner").fadeOut(),
         e(".loader")
         .delay(200)
@@ -45,6 +47,7 @@
       l();
     }),
     e(window).resize(function () {
+      $('#cover-img').height(window.innerHeight)
       l();
     });
   var o = e(".mobile-but"),

@@ -107,6 +107,10 @@
     position: relative;
 }
 
+circle {
+    fill: #14191d;
+}
+
 /*End site wrapper*/
 
 /*To the top*/
@@ -377,6 +381,17 @@ section.hero {
     color: #ffffff !important;
     opacity: 1 !important;
 } */
+
+.zoom {
+    padding: 30px;
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    opacity: 75%;
+}
 
 .block-helper li {
     position: relative;
