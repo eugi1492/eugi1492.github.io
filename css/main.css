@@ -1,4 +1,7 @@
 /*Preloader*/
+html {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 
 .loader {
     background: #13181d;
