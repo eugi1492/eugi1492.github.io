@@ -1,6 +1,6 @@
 /*Preloader*/
 html {
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: "Quicksand", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 .loader {
@@ -364,7 +364,6 @@ section.hero {
     text-transform: uppercase;
     margin-left: 50px;
     margin-right: 50px;
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .main-menu li a,
@@ -650,7 +649,6 @@ h1.large {
 .block-tracklist .playlist li:before {
     /* content: "\e8d4"; */
     content: "";
-    font-family: "fontello";
     position: absolute;
     left: 1.0625rem;
     top: 1.3rem;
