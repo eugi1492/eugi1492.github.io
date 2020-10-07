@@ -44,12 +44,12 @@
     t.css("height", e(window).height());
   }
   e(function () {
-      l();
-    }),
-    e(window).resize(function () {
-      $('#cover-img').height(window.innerHeight)
-      l();
-    });
+    l();
+  });
+  // e(window).resize(function () {
+  //   $('#cover-img').height(window.innerHeight)
+  //   l();
+  // });
   var o = e(".mobile-but"),
     n = e(".main-nav ul");
   n.height();
