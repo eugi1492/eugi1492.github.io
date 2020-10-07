@@ -1,9 +1,9 @@
 !(function (e) {
   "use strict";
   $('#cover-img').height(window.innerHeight)
+  $('body').show();
+
   e(window).on("load", function () {
-      console.log("loaded")
-      $('body').show();
       e(".loader-inner").fadeOut(),
         e(".loader")
         .delay(200)
